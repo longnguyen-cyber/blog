@@ -9,8 +9,9 @@ import Loading from '../global/Loading'
 import Pagination from '../global/Pagination'
 interface IProps {
   blog: IBlog
+  blogs: IBlog[]
 }
-const DisplayBlog = ({ blog }: IProps) => {
+const DisplayBlog = ({ blog, blogs }: IProps) => {
   const { auth, comments } = useSelector((state: RootStore) => state)
   const dispatch = useDispatch()
   const history = useHistory()

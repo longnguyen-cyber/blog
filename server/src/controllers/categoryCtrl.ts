@@ -12,6 +12,17 @@ const categoryCtrl = {
       return res.status(500).json({ msg: error.message })
     }
   },
+  getCategory: async (req: IReqAuth, res: Response) => {
+    try {
+      const category = await Categories.findOne({ _id: req.params.id }).sort({
+        createdAt: -1
+      })
+
+      res.status(200).json({ category })
+    } catch (error: any) {
+      return res.status(500).json({ msg: error.message })
+    }
+  },
   createCategory: async (req: IReqAuth, res: Response) => {
     if (!req.user)
       return res.status(401).json({ message: 'Invalid Authentication' })

@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import './styles/index.css'
 import 'react-quill/dist/quill.snow.css'
-
 import { Provider } from 'react-redux'
 import store from './redux/store'
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>

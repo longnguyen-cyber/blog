@@ -240,9 +240,10 @@ const blogCtrl = {
         '-password'
       )
 
+      const blogs = await Blog.find()
       if (!blog) return res.status(400).json({ msg: 'Blog does not exist.' })
-
-      return res.json(blog)
+      const data = { blog, blogs }
+      return res.json(data)
     } catch (err: any) {
       return res.status(500).json({ msg: err.message })
     }

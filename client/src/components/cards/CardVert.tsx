@@ -14,7 +14,8 @@ const CardVert = ({ blog }: IProps) => {
           className="card-img-top"
           style={{
             height: '100%',
-            objectFit: 'cover'
+            objectFit: 'cover',
+            width: '100%'
           }}
         />
       )}

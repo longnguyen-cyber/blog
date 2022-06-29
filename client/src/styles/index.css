@@ -27,6 +27,10 @@ iframe {
 .ql-editor {
   max-height: 350px;
 }
+.card {
+  min-height: 28rem;
+}
+
 /* auth page */
 @import url('./auth.css');
 
@@ -50,3 +54,6 @@ iframe {
 
 /* comments page */
 @import url('./comments.css');
+
+/* slider page */
+@import url('./slider.css');

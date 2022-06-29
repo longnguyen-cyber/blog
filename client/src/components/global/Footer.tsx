@@ -1,4 +1,5 @@
 import React from 'react'
+import Sliders from '../slider/Sliders'
 
 const Footer = () => {
   return (
